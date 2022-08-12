@@ -4,10 +4,15 @@ const bodyParser = require('body-parser');
 const apis = require('./Apis')
 const UserRoute = require('./Users');
 const StoreRoute = require('./Store');
+const helmet = require('helmet');
+const compression = require('compression')
+
 
 var cors = require('cors')
 app.use(bodyParser.json());
 app.use(cors())
+app.use(helmet());
+app.use(compression());
 app.use(function (req, res, next) {
 	res.setHeader('Access-Control-Allow-Origin', '*');
 	next()
