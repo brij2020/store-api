@@ -1,0 +1,36 @@
+{
+  "name": "cbt",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon src/app.js",
+    "start": "node src/app.js",
+    "dev:static": "nodemon src/app.js",
+    "admin": "concurrently \"yarn  dev:static\" \"yarn client\"",
+    "client": "npm run start --prefix frontend"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.0",
+    "concurrently": "^7.2.2",
+    "cors": "^2.8.5",
+    "dayjs": "^1.11.3",
+    "express": "^4.18.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.3.8",
+    "multer": "^1.4.5-lts.1",
+    "mysql": "^2.18.1",
+    "node-xlsx": "^0.21.0",
+    "nodemailer": "^6.7.6",
+    "nodemon": "^2.0.16",
+    "read-excel-file": "^5.3.5",
+    "sqlite3": "^5.0.8",
+    "uuid4": "^2.0.2"
+  }
+}
